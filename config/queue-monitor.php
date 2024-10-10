@@ -1,4 +1,4 @@
 <?php
 return [
-    'log_channel' => env('QUEUE_MONITOR_LOG_CHANNEL', 'stack'),
+    'redis_connection' => env('QUEUE_MONITOR_REDIS_CONNECTION', 'default'), // Redis connection configuration
 ];

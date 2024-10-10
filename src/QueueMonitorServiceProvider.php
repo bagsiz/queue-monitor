@@ -15,6 +15,9 @@ class QueueMonitorServiceProvider extends ServiceProvider
         // Register queue events
         $this->registerEvents();
 
+        // Register routes
+        $this->loadRoutesFrom(__DIR__.'/routes/queue-monitor.php');
+
         // Publish the config file if users need to customize settings
         $this->publishes([
             __DIR__.'/config/queue-monitor.php' => config_path('queue-monitor.php'),
