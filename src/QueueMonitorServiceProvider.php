@@ -16,23 +16,23 @@ class QueueMonitorServiceProvider extends ServiceProvider
         $this->registerEvents();
 
         // Register routes
-        $this->loadRoutesFrom(__DIR__.'/routes/queue-monitor.php');
+        $this->loadRoutesFrom(__DIR__ . '/../../routes/queue-monitor.php');
 
         // Publish the config file if users need to customize settings
         $this->publishes([
-            __DIR__.'/config/queue-monitor.php' => config_path('queue-monitor.php'),
+            __DIR__ . '/../../config/queue-monitor.php' => config_path('queue-monitor.php'),
         ], 'config');
 
         // Publish the view files for the monitoring panel
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/queue-monitor'),
+            __DIR__ . '/../../resources/views' => resource_path('views/vendor/queue-monitor'),
         ], 'views');
     }
 
     public function register()
     {
         // Merge default configuration
-        $this->mergeConfigFrom(__DIR__.'/config/queue-monitor.php', 'queue-monitor');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/queue-monitor.php', 'queue-monitor');
 
         // Bind the QueueMonitorService
         $this->app->singleton(QueueMonitorService::class, function ($app) {
