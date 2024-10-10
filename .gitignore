@@ -8,3 +8,4 @@ composer.lock
 .env.backup
 .env.production
 .idea
+**/.DS_Store

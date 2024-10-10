@@ -5,13 +5,14 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Bagsiz",
-            "email": "example@bagsiz.com"
+            "name": "Murat Bağsız",
+            "email": "murat@bagsiz.com"
         }
     ],
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "^8.0|^9.0|^10.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/queue": "^8.0|^9.0|^10.0|^11.0",
         "mockery/mockery": "^1.4", 
         "phpunit/phpunit": "^9.0"
     },

@@ -22,6 +22,7 @@ class QueueMonitorService
         Redis::hset('queue:jobs:processing', $event->job->getJobId(), json_encode([
             'connection' => $event->connectionName,
             'name' => $event->job->resolveName(),
+            'payload' => $event->job->payload(),
             'started_at' => now()->toDateTimeString(),
         ]));
     }
@@ -39,6 +40,7 @@ class QueueMonitorService
         Redis::hset('queue:jobs:processed', $event->job->getJobId(), json_encode([
             'connection' => $event->connectionName,
             'name' => $event->job->resolveName(),
+            'payload' => $event->job->payload(),
             'completed_at' => now()->toDateTimeString(),
         ]));
     }
@@ -59,6 +61,7 @@ class QueueMonitorService
         Redis::hset('queue:jobs:failed', $event->job->getJobId(), json_encode([
             'connection' => $event->connectionName,
             'name' => $event->job->resolveName(),
+            'payload' => $event->job->payload(),
             'failed_at' => now()->toDateTimeString(),
             'exception' => $event->exception->getMessage(),
         ]));

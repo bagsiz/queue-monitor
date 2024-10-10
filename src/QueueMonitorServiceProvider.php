@@ -6,7 +6,6 @@ use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Log;
 use Bagsiz\QueueMonitor\Services\QueueMonitorService;
 
 class QueueMonitorServiceProvider extends ServiceProvider
