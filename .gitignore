@@ -1,0 +1,10 @@
+/vendor
+/.fleet
+/.idea
+/.vscode
+/.zed
+composer.lock
+.env
+.env.backup
+.env.production
+.idea

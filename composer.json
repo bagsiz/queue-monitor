@@ -1,0 +1,32 @@
+{
+    "name": "bagsiz/queue-monitor",
+    "description": "A Laravel package for monitoring queue jobs.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bagsiz",
+            "email": "example@bagsiz.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^8.0|^9.0|^10.0",
+        "mockery/mockery": "^1.4", 
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bagsiz\\QueueMonitor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bagsiz\\QueueMonitor\\QueueMonitorServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
